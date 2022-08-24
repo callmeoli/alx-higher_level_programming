@@ -2,7 +2,8 @@
 def uppercase(str):
     for elements in str:
         if ord(elements) >= 97 and ord(elements) <= 122:
-            print(chr(ord(elements) - 32), end="")
+            n = (chr(ord(elements) - 32))
         else:
-            print(elements, end="")
+            n = elements
+        print(n, end="")
     print("\n", end="") 
