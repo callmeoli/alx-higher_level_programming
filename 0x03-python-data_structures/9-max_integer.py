@@ -4,9 +4,12 @@ def max_integer(my_list=[]):
         return None
     else:
         maxm = my_list[0]
-        for i in range(0, len(my_list) - 1):
+        for i in range(0, len(my_list) - 2):
             if my_list[i] > my_list[i + 1]:
                 maxm = my_list[i]
-            elif my_list[len(my_list) - 1] > maxm:
-                maxm = my_list[len(my_list) - 1]
-                return maxm
+            else:
+                maxm = my_list[i + 1]
+        print("maxm after for looop {:d} Length of list {:d}".format(maxm, len(my_list)))
+        if my_list[len(my_list) - 1] > maxm:
+            maxm = my_list[len(my_list) - 1]
+    return maxm
