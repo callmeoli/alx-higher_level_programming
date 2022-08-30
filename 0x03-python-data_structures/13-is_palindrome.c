@@ -10,9 +10,8 @@ int is_palindrome(listint_t **head)
 listint_t *current;
 listint_t *end;
 int count = 0;
-int k;
 int i = 0;
-int j = 0;
+
 
 current = *head;
 end = *head;
@@ -26,16 +25,16 @@ while (end->next != NULL)
 	count++;
 }
 end = *head;
-k = count;
 
-while (i != k / 2)
+while (i != count / 2)
 {
-while (j < count)
+int j = 0;
+
+while (j < (count - i))
 {
 	end = end->next;
 	j++;
 }
-count--;
 j = 0;
 if (end->n != current->n)
 	return (0);
