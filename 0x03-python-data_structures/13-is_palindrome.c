@@ -27,16 +27,16 @@ k = count;
 
 while (i != k / 2)
 {
-while (j < count) // we got to the end @count
+while (j < count)
 {
 	end = end->next;
 	j++;
 }
 count--;
 j = 0;
-if (end->n != current->n) // we compare end with current 
+if (end->n != current->n)
 	return (0);
-current = current->next; //we got to the next current
+current = current->next;
 i++;
 end = *head;
 }
