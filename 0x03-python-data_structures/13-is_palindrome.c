@@ -16,7 +16,10 @@ int j = 0;
 
 current = *head;
 end = *head;
-
+if (*head == NULL)
+{
+	return (1);
+}
 while (end->next != NULL)
 {
 	end = end->next;
