@@ -8,4 +8,5 @@ def roman_to_int(roman_string):
             num = num - dic[numeral]
         else:
             num = num + dic[numeral]
+        last = numeral
     return num
