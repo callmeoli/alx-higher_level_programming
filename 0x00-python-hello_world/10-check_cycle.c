@@ -12,6 +12,8 @@ listint_t *fast;
 slow = list;
 fast = list;
 
+if (list == NULL)
+	return (0);
 
 while (fast->next->next != NULL)
 {
