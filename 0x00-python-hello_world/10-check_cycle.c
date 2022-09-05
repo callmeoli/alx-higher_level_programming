@@ -14,7 +14,8 @@ fast = list;
 
 if (list == NULL)
 	return (0);
-
+if (list->next == NULL)
+	return (0);
 while (fast->next->next != NULL)
 {
 	slow = slow->next;
