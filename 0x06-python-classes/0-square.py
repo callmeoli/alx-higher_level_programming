@@ -1,8 +1,5 @@
 #!/usr/bin/python3
-"""
-
-This module is composed by a function that adds two numbers
-
-"""
 class Square:
+    """ Class Square that defines a square.
+    """
     pass
