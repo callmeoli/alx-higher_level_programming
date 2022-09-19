@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+""" A rectangle with """
 class Rectangle:
 
     """ A rectangle with a width and height. """
