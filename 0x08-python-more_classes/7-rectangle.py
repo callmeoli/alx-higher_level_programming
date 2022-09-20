@@ -5,7 +5,7 @@
 class Rectangle:
     """ A rectangle with a width and height. """
     number_of_instances = 0
-    print_symbol = str("#")
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         """ (Rectangle, number, number) """
@@ -21,12 +21,11 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return str1
 
-        for height in range(self.__height):
-            for width in range(self.__width):
-                str1 += str(self.print_symbol)
-            if height <= self.__height - 1:
-                str1 += '\n'
-        return str1
+        for i in range(self.height):
+            str1 += (str(self.print_symbol) * self.width) + "\n"
+
+        return str1[:-1]
+
 
     def __repr__(self):
         """ Return the string represention """
