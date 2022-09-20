@@ -29,18 +29,6 @@ class Rectangle:
             for width in range(self.__width):
                 str1 += '#'
             str1 += '\n'
-        str1 += '\n'
-        return str1
-
-    def __repr__(self):
-        """ repr """
-
-        str1 = ''
-        for height in range(self.__height):
-            for width in range(self.__width):
-                str1 += '#'
-            str1 += '\n'
-        str1 += '\n'
         return str1
 
     @property
