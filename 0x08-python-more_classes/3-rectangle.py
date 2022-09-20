@@ -25,6 +25,9 @@ class Rectangle:
         """ Return the value """
 
         str1 = ''
+        if self.__width == 0 or self.__height == 0:
+            return str1
+            
         for height in range(self.__height):
             for width in range(self.__width):
                 str1 += '#'
