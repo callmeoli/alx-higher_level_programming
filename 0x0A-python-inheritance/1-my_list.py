@@ -12,4 +12,6 @@ class MyList(list):
         """
         print sorted list
         """
-        return self.sort()
+        l_sorted = self.copy()
+        l_sorted.sort()
+        print(l_sorted)
