@@ -6,7 +6,7 @@ inherited from, the specified class ; otherwise False.
 """
 
 
-def  inherits_from(obj, a_class):
+def inherits_from(obj, a_class):
     """ Function that returns True/False if obj is a type of a_class
     Args:
         obj: object
