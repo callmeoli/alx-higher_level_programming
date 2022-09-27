@@ -19,5 +19,7 @@ class Square(Rectangle):
     def area(self):
         """ a method that return the area of the instance """
         return super().area()
+
     def __str__(self):
-        return ("[{}] {:d}/{:d}".format("Square", self.__size , self.__size))
+        """" a method that return string represntaion"""
+        return ("[{}] {:d}/{:d}".format("Square", self.__size, self.__size))
