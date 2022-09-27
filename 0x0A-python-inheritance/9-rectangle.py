@@ -23,9 +23,11 @@ class Rectangle(BaseGeometry):
             raise TypeError("{} must be an integer".format(name))
         elif value <= 0:
             raise ValueError("{} must be greater than 0".format(name))
+
     def area(self):
         """ a method that return the area of the instance """
         return self.__width * self.__height
+
     def __str__(self):
         """ Special metho that return the printable string """
         return "[Rectangle] {:d}/{:d}".format(self.__width, self.__height)
