@@ -35,7 +35,8 @@ Trying to pass a non-integer argument
     Traceback (most recent call last):
               ...
     ValueError: name must be greater than 0
-Trying to pass a non-integer argument
+
+Trying to pass a zero value
     >>> bg = BaseGeometry()
     >>> bg.integer_validator("name", 0)
     Traceback (most recent call last):
