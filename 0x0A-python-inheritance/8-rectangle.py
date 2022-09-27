@@ -16,10 +16,6 @@ class Rectangle(BaseGeometry):
         self.__width = width
         self.__height = height
 
-    def area(self):
-        """ calculate the area """"
-        raise Exception("area() is not implemented")
-
     def integer_validator(self, name, value):
         """Validate the input """
         if type(value) != int:
