@@ -6,4 +6,4 @@ import json
 
 def to_json_string(my_obj):
 	""" This function write file and return number of character written"""
-	return json.dump(my_obj)
+	return json.dumps(my_obj)
