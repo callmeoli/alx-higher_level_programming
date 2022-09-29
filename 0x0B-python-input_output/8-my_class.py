@@ -9,6 +9,6 @@ class MyClass:
     def __init__(self, name):
         self.name = name
         self.number = 0
+        self.age = "shit"
 
-    def __str__(self):
-        return "[MyClass] {} - {:d}".format(self.name, self.number)
+    
