@@ -1,1 +1,1 @@
-Python almost a circle
+This is Python almost circle project
