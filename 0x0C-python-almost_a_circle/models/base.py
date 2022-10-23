@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Contains a class `Base`"""
 import json
+import csv
 
 
 class Base:
@@ -90,3 +91,51 @@ class Base:
         json = cls.from_json_string(string)
         instances = [cls.create(**instance) for instance in json]
         return instances
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """ Save object files to CSV """
+        if cls.__name__ == 'Square':
+            from_dic = ['0', '0', '0', '0']
+            key = ['id', 'size', 'x', 'y'] 
+        else:
+            from_dic = ['0', '0', '0', '0', '0']
+            key = ['id', 'width', 'height', 'x', 'y']
+
+        matrix = []
+        
+
+        name = "{}.csv".format(cls.__name__)
+
+        if list_objs == None:
+            pass
+        else:
+            for obj in list_objs:
+                for kv in range(len(key)):
+                    from_dic[kv]= obj.to_dictionary()[key[kv]]
+                matrix.append(from_dic[:])
+            with open(name, 'w') as f:
+                writer_object = csv.writer(f)
+                writer_object.writerow(matrix)
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """ read from csv file """
+
+        if cls.__name__ == 'Square':
+            from_dic = ['0', '0', '0', '0']
+            key = ['id', 'size', 'x', 'y'] 
+        else:
+            from_dic = ['0', '0', '0', '0', '0']
+            key = ['id', 'width', 'height', 'x', 'y']
+
+        name = "{}.csv".format(cls.__name__)
+        matrix = []
+        with open(name, 'r') as f:
+            reader = csv.reader(f)
+            for obj in reader:
+                dic_csv = {} 
+                for kv in range(len(key)):
+                    dic_csv[key[kv]] = obj[kv]
+                matrix.append(dic_csv)
+            return matrix

@@ -6,13 +6,11 @@ class Rectangle:
     """ A rectangle with a width and height. """
     def __init__(self, width=0, height=0):
         """ (Rectangle, number, number) """
-
         self.__height = height
         self.__width = width
 
     def __str__(self):
         """ Return the value """
-
         str1 = ''
         if self.__width == 0 or self.__height == 0:
             return str1
