@@ -1,95 +1,50 @@
-The ``0-add_integer`` module
-============================
+===============================
+ How to Use 0-add_integer.py
+===============================
 
-Using ``add_integer``
----------------------
+This library contains only one function called
 
-Importing function from the module:
-    >>> add_integer = __import__('0-add_integer').add_integer
+``add_integer(a, b=98):``
 
-Adding 1 and 2
-    >>> add_integer(1, 2)
-    3
+parameter `b` contains a default value of 98
 
-Subtracting 100 and 2
-    >>> add_integer(100, -2)
-    98
+Numbers:
 
-Adding 2.1 and 98
-    >>> add_integer(2.1)
-    100
+``add_integer()`` computes returns the sum of it's arguments
 
-Subtracting 100.3 and 2
-	    >>> add_integer(100.3, -2)
-	    98
+>>> add_integer = __import__('0-add_integer').add_integer
 
-Adding an integer number and a string
-    >>> add_integer(4, "School")
-    Traceback (most recent call last):
-	      ...
-    TypeError: b must be an integer
+It works with normal numbers
 
-Passing None
-    >>> add_integer(None)
-    Traceback (most recent call last):
-	      ...
-    TypeError: a must be an integer
+>>> add_integer(9, 5)
+14
 
-Adding a letter and a number
-    >>> add_integer('1', 1)
-    Traceback (most recent call last):
-              ...
-    TypeError: a must be an integer
+It also worksl with floating numbers
 
-Adding two letters
-    >>> add_integer('2', '1')
-    Traceback (most recent call last):
-              ...
-    TypeError: a must be an integer
+>>> add_integer(9, 5.55)
+14
 
-Adding a tuple
-    >>> add_integer((1, 1))
-    Traceback (most recent call last):
-              ...
-    TypeError: a must be an integer
+>>> add_integer(9.786, 5.868)
+14
 
-Adding a number and a list
-    >>> add_integer(123, [])
-    Traceback (most recent call last):
-	      ...
-    TypeError: b must be an integer
+It also works with one argument
 
-Passing a string
-    >>> add_integer("Hello")
-    Traceback (most recent call last):
-	      ...
-    TypeError: a must be an integer
+>>> add_integer(2)
+100
 
-Adding two float numbers
-    >>> add_integer(2.9, 2.9)
-    4
+Strings:
 
-Subtracting 98 and 1
-    >>> add_integer(-1)
-    97
+``add_integer()`` doesnt't work with other type other that integers
+and floating point numbers
 
-Case Overflow:
+>>> add_integer(4, "holberton") #doctest: +ELLIPSIS
+Traceback (most recent call last):
+TypeError: ... must be an integer
 
-    >>> add_integer(float('inf'), 0)
-    Traceback (most recent call last):
-    	      ...
-    OverflowError: cannot convert float infinity to integer
+>>> add_integer("alx")
+Traceback (most recent call last):
+TypeError: a must be an integer
 
-Case Overflow 2:
-
-    >>> add_integer(float('inf'), float('-inf'))
-    Traceback (most recent call last):
-    	      ...
-    OverflowError: cannot convert float infinity to integer
-
-Case NaN:
-
-    >>> add_integer(0, float('nan'))
-    Traceback (most recent call last):
-    	      ...
-    ValueError: cannot convert float NaN to integer
+>>> add_integer(["a", 3, 6], (2, 6, 9))
+Traceback (most recent call last):
+TypeError: a must be an integer
