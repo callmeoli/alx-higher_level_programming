@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """ this module containg files that describe """
+
 class Node:
     """ class node """
     def __init__(self, data, next_node=None):
@@ -52,7 +53,7 @@ class SinglyLinkedList:
         self.__head = None
 
     def sorted_insert(self, value):
-        """ sorted insert """ 
+        """ sorted insert """
         ptr = self.__head
 
         while ptr is not None:
