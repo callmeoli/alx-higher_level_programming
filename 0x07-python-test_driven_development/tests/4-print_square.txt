@@ -1,0 +1,31 @@
+The ``4-print_square`` module
+============================
+
+Using ``print_square``
+---------------------
+
+Importing function from the module:
+
+>>> print_square = __import__('4-print_square.py').print_square
+
+passing size 4:
+
+>>> print_square(4)
+####
+####
+####
+####
+
+Passing size 10:
+
+>>> print_square(10)
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########

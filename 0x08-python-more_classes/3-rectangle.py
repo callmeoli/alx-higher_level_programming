@@ -18,10 +18,8 @@ class Rectangle:
             return str1
 
         for height in range(self.__height):
-            for width in range(self.__width):
-                str1 += '#'
-            str1 += '\n'
-        return str1
+            str1 += (str(self.print_symbol) * self.width) + "\n"
+        return str1[:-1]
 
     @property
     def width(self):
