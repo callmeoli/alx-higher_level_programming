@@ -6,6 +6,7 @@ import json
 class Base:
     """
         Defines the class `Base`
+
         Attributes:
             id (int): instance attribute
     """
@@ -15,6 +16,7 @@ class Base:
     def __init__(self, id=None):
         """
             Initializes class and object data
+
             Args:
                 id (int): integer passed on object creation
         """

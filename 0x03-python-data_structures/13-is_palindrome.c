@@ -1,46 +1,33 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "lists.h"
+
 /**
-* is_palindrome - check whethere list is palindrome
-* @head: head of list
-* Return: int
-*/
+ * is_palindrome - test if is a palindrome
+ * @head: firts node of list
+ * Return: 1 if is palindrome, 0 for no
+ */
 int is_palindrome(listint_t **head)
 {
-listint_t *current;
-listint_t *end;
-int count = 0;
-int i = 0;
+	listint_t *buscar;
+	int con1 = 0, con2 = 0;
+	int arr[4096];
 
 
-current = *head;
-end = *head;
-if (*head == NULL)
-{
+	if (!head)
+		return (0);
+	buscar = *head;
+	if (!*head || (*head)->next == NULL)
+		return (1);
+
+	for (con1 = 0; buscar; buscar = buscar->next, con1++)
+		arr[con1] = buscar->n;
+	for (con1--; con1 > con2; con1--, con2++)
+	{
+		if (arr[con2] == arr[con1])
+			;
+		else
+			return (0);
+	}
 	return (1);
-}
-while (end->next != NULL)
-{
-	end = end->next;
-	count++;
-}
-end = *head;
-
-while (i != count / 2)
-{
-int j = 0;
-
-while (j < (count - i))
-{
-	end = end->next;
-	j++;
-}
-j = 0;
-if (end->n != current->n)
-	return (0);
-current = current->next;
-i++;
-end = *head;
-}
-return (1);
 }

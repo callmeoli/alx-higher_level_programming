@@ -1,16 +1,18 @@
 #!/usr/bin/python3
+"""Contains a class `MyInt` that inherits from `int`"""
+
+
 class MyInt(int):
-    """ Class that inherits from class int"""
-    
-
+    """Inherits from int base class"""
     def __init__(self, value):
-    """Initialize value"""
-    self.value = value
+        """Initialize value"""
+        self.value = value
 
-    def __eq__(self, other):
-        """ Method that returns != check """
-        return int.__ne__(self, other)
+    def __ne__(self, x):
+        """not equal to comparison"""
+        if self.value is x:
+            return True
 
-    def __ne__(self, other):
-        """ Method that returns == check """
-        return int.__eq__(self, other)
+    def __eq__(self, x):
+        """equal to comparison"""
+        return not self.__ne__(x)

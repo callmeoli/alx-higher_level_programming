@@ -26,7 +26,6 @@ class Rectangle:
 
         return str1[:-1]
 
-
     def __repr__(self):
         """ Return the string represention """
 
