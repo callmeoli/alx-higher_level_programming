@@ -5,9 +5,11 @@ class Square extends Square1 {
     let i = 0;
     let j = 0;
     let S = '';
-    let symbol = c;
+    
     if (c === undefined) {
-      symbol = 'X';
+      let symbol = 'X';
+    } else {
+      let symbol = c;
     }
     while (i < this.size) {
       while (j < this.size) {
