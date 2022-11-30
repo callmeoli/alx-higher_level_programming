@@ -8,11 +8,11 @@ if (b <= 3) {
   console.log(0);
 } else {
   for (let i = 3; i <= b; i++) {
-    if (process.argv[i] > max) {
+    if (parseInt(process.argv[i], 10) > max) {
       max2 = max;
-      max = process.argv[i];
-    } else if (process.argv[i] > max2) {
-      max2 = process.argv[i];
+      max = parseInt(process.argv[i], 10);
+    } else if (parseInt(process.argv[i], 10) > max2) {
+      max2 = parseInt(process.argv[i], 10);
     }
   }
   console.log(max2);
