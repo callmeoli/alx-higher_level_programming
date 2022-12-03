@@ -16,9 +16,9 @@ if __name__ == '__main__':
     db = MySQLdb.connect(db=sys.argv[3], host="localhost",
                          user=sys.argv[1], passwd=sys.argv[2], port=3306)
     cursor = db.cursor()
-    cursor.execute("SELECT * FROM states \
+    cursor.execute("""SELECT * FROM states \
                     WHERE name LIKE BINARY %(name)s \
-                    ORDER BY states.id ASC", {'name': sys.argv[4]})
+                    ORDER BY states.id ASC""", {'name': sys.argv[4]})
 
     result = cursor.fetchall()
     if result in not None:
