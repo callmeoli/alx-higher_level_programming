@@ -39,4 +39,3 @@ if __name__ == '__main__':
     if rows is not None:
         for row in rows:
             print(row)
-
