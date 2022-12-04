@@ -14,6 +14,8 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    upd = update(State)
-    val = upd.values({State.name: "New Mexico"})
-    cond = val.where(State.c.id == 2)
+    stateUpdated = session.query(State).filter(State.id == 2).first()
+    if stateUpdated:
+        upd = update(State)
+        val = upd.values({State.name: "New Mexico"})
+        cond = val.where(State.c.id == 2)
