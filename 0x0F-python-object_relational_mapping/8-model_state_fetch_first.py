@@ -13,8 +13,4 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
     states_inst = session.query(State).order_by(State.id).first()
-    if states_inst is None:
-        print("Nothing")
-    else:
-        for instance in states_inst:
-            print('{0}: {1}'.format(instance.id, instance.name))
+    print("Nothing" if not state else "{}: {}".format(state.id, state.name))
