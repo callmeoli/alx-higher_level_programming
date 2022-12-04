@@ -17,6 +17,3 @@ if __name__ == "__main__":
     upd = update(State)
     val = upd.values({"name": "New Mexico"})
     cond = val.where(State.c.id == 2)
-    states_inst = session.query(State).order_by(State.id)
-    for instance in states_inst:
-        print('{0}: {1}'.format(instance.id, instance.name))
