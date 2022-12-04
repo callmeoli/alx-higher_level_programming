@@ -15,5 +15,5 @@ if __name__ == "__main__":
     session = Session()
     if State.name.contains('a'):
         stateUpdated = session.query(State).\
-            filter(State.name.contains('a')).delete()
+            filter(State.name.contains('a')).all().delete()
         session.commit()
