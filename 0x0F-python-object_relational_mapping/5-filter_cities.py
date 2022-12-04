@@ -24,5 +24,4 @@ if __name__ == '__main__':
     FROM cities JOIN states ON cities.state_id = states.id \
     WHERE states.name = '{}';".format(sys.argv[4]))
     rows = cur.fetchall()
-    if rows is not None:
-        print(", ".join([row[1] for row in rows]))
+    print(", ".join([row[1] for row in rows]))
