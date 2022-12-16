@@ -4,7 +4,7 @@
 from urllib import request
 
 if __name__ == "__main__":
-    #this code will get the status of link
+    # this code will get the status of link
     with urllib.request.urlopen('https://alx-intranet.hbtn.io/status') \
             as response:
         html = response.read()
