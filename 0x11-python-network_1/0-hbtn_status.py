@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 # this module fetch alx-intranet status
 
-import urllib.request
+from urllib import request
 
 if __name__ == "__main__":
     with urllib.request.urlopen('https://alx-intranet.hbtn.io/status') \
