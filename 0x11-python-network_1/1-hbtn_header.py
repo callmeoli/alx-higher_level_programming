@@ -8,5 +8,5 @@ if __name__ == "__main__":
     url = argv[1]
     with request.urlopen(url) \
             as response:
-        Id = response.gerheader('X-Request-Id')
+        Id = response.getheader('X-Request-Id')
     print(Id)
