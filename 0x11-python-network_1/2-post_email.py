@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 """ take url and display X-Reques-Id """
-from sys import argv
+import sys
 import urllib
 
-url = argv[1]
-values = {'email': argv[2]}
+url = sys.argv[1]
+values = {'email': sys.argv[2]}
 data = urllib.parse.urlencode(values)
 data = data.encode('ascii')
 req = urllib.request.Request(url, data)
