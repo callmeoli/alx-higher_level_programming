@@ -12,5 +12,5 @@ if __name__ == "__main__":
     """ take url and display X-Reques-Id """
     with request.urlopen(req) \
             as response:
-        page = response.read()
+        page = response.read().decode('utf-8')
     print(page)
