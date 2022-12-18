@@ -8,7 +8,7 @@ import requests
 if __name__ == "__main__":
     """ the function here bellow"""
     q_value = "" if len(argv) == 1 else argv[1]
-    values = { 'q' = q_value }
+    values = {'q' = q_value}
     url = 'http://0.0.0.0:5000/search_user'
     response = requests.post(url, values)
     try:
