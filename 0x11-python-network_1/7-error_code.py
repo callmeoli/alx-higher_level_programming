@@ -8,6 +8,7 @@ if __name__ == "__main__":
     url = argv[1]
     try:
         res = requests.get(url)
+        code = res.status_code
         print(res.text)
     except requests.HTTPError as err:
-        print("Error code: {}".format(err.response.status_code))
+        print("Error code: {}".format(code))
