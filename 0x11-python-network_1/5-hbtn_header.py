@@ -7,4 +7,4 @@ import requests
 if __name__ == "__main__":
     """ the function below """
     head = requests.get(argv[1]).headers
-    print(head["X-Request-Id"])
+    print(head.get("X-Request-Id"))
