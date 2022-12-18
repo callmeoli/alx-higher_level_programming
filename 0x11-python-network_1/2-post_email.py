@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" take url and display X-Reques-Id """
+""" take url and display  of X-Reques-Id """
 import sys
 import urllib
 
