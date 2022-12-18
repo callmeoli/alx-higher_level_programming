@@ -8,5 +8,6 @@ if __name__ == "__main__":
     url = argv[1]
     try:
         res = requests.get(url)
+        print(res.text)
     except requests.HTTPError as err:
         print(err)
