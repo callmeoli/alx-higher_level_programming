@@ -1,19 +1,13 @@
 #!/usr/bin/python3
-"""Start link class to table in database
-"""
-import sys
-from model_state import Base, State
-from sqlalchemy import Column, Integer, String
+""" This module create a table States """
+from sqlalchemy import Integer, Column, String
 from sqlalchemy.ext.declarative import declarative_base
-
 
 Base = declarative_base()
 
 
 class State(Base):
-    """ definition of class state """
-
+    """ define table states """
     __tablename__ = 'states'
-
-    id = Column(Integer, unique=True, nullable=False, primary_key=True)
+    id = Column(Integer, unique=True, primary_key=True, nullable=False)
     name = Column(String(128), nullable=False)
