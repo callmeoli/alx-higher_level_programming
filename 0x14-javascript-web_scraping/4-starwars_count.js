@@ -1,16 +1,37 @@
 #!/usr/bin/node
-/* a script that reads and prints the content of a file */
+
+/**
+
+ * Script that prints the number of movies
+
+ * where the character “Wedge Antilles” is present.
+
+ */
 
 const request = require('request');
+
+const process = require('process');
+
 const url = process.argv[2];
-request(url, (error, response, body) => {
-  if (error) {
-    console.log('Error:', error);
+
+request.get(url, (err, _resp, body) => {
+  if (err === null) {
+    const data = JSON.parse(body);
+
+    let films = data.results;
+
+    films = films.filter(
+
+      film => film.characters.find(
+
+        character => character.match(/18/)
+
+      )
+
+    );
+
+    console.log(films.length);
   } else {
-    const resutls = JSON.parse(body).results;
-    console.log(resutls);
-    const valueToCount = 'https://swapi-api.alx-tools.com/api/people/18/';
-    const count = Object.values(resutls).reduce((n, val) => n + (val === valueToCount), 0);
-    console.log(count);
+    console.log(err);
   }
 });
